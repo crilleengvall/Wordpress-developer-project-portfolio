@@ -18,6 +18,7 @@ function dpp_setup_post_type() {
             'public' => true,
             'has_archive' => false,
             'menu_icon' => 'dashicons-portfolio',
+            'supports' => ['thumbnail'],
             'rewrite' => [
                 'slug' => 'projects',
             ],
