@@ -32,6 +32,7 @@ class DeveloperProjectPortfolio {
   }
 
   private function register_hooks() {
+      $this->add_custom_post_type();
       register_activation_hook(__FILE__, array($this, 'on_activate_plugin') );
       register_deactivation_hook(__FILE__, array($this, 'on_deactivate_plugin') );
   }
@@ -42,6 +43,10 @@ class DeveloperProjectPortfolio {
 
   public function on_deactivate_plugin() {
       flush_rewrite_rules();
+  }
+
+  private function add_custom_post_type() {
+      require_once( 'custom-post-types/project-custom-post-type.php' );
   }
 }
 
