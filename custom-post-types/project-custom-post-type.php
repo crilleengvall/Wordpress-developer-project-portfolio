@@ -3,8 +3,17 @@
 function dpp_setup_post_type() {
     register_post_type('dpp_project',
         ['labels' => [
-                'name' => __('Projects'),
-                'singular_name' => __('Project'),
+                'name'               => __( 'Projects' ),
+                'singular_name'      => __( 'Project' ),
+                'add_new'            => __( 'Add new' ),
+                'add_new_item'       => __( 'Add new project' ),
+                'edit_item'          => __( 'Edit project' ),
+                'new_item'           => __( 'New project' ),
+                'all_items'          => __( 'All projects' ),
+                'view_item'          => __( 'View project' ),
+                'search_items'       => __( 'Search for project' ),
+                'not_found'          => __( 'No projects found' ),
+                'not_found_in_trash' => __( 'No projects in trash' )
             ],
             'public' => true,
             'has_archive' => false,
@@ -73,4 +82,5 @@ function dpp_setup_post_type_taxonomies() {
           )
       );
 }
+
 add_action( 'init', 'dpp_setup_post_type_taxonomies');
