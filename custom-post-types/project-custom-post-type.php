@@ -13,7 +13,11 @@ function dpp_setup_post_type() {
                 'view_item'          => __( 'View project' ),
                 'search_items'       => __( 'Search for project' ),
                 'not_found'          => __( 'No projects found' ),
-                'not_found_in_trash' => __( 'No projects in trash' )
+                'not_found_in_trash' => __( 'No projects in trash' ),
+                'featured_image'        => __( 'Project Image' ),
+	              'set_featured_image'    => __( 'Set project image' ),
+	              'remove_featured_image' => __( 'Remove project image' ),
+	              'use_featured_image'    => __( 'Use as project image' ),
             ],
             'public' => true,
             'has_archive' => false,
