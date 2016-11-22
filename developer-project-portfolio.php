@@ -35,8 +35,9 @@ class DeveloperProjectPortfolio {
       $this->add_custom_post_type();
       $this->add_project_links_metabox();
       register_activation_hook(__FILE__, array($this, 'on_activate_plugin') );
-      register_deactivation_hook(__FILE__, array($this, 'on_deactivate_plugin') );
+      register_deactivation_hook( __FILE__, array($this, 'on_deactivate_plugin') );
       add_action( 'admin_enqueue_scripts', array($this, 'add_admin_css') );
+      add_filter( 'template_include', array($this, 'include_single_template'), 1 );
   }
 
   public function on_activate_plugin() {
@@ -58,6 +59,17 @@ class DeveloperProjectPortfolio {
   public function add_admin_css() {
       wp_register_style('developer_project_portfolio_admin_css', plugins_url('/css/admin.css', __FILE__));
       wp_enqueue_style( 'developer_project_portfolio_admin_css' );
+  }
+
+  public function include_single_template($template_path) {
+      if ( get_post_type() == 'dpp_project' && is_single() ) {
+          if ( $theme_file = locate_template( array ( 'single-dpp_project.php' ) ) ) {
+              $template_path = $theme_file;
+          } else {
+              $template_path = plugin_dir_path( __FILE__ ) . 'templates/single-dpp_project.php';
+          }
+      }
+      return $template_path;
   }
 }
 
