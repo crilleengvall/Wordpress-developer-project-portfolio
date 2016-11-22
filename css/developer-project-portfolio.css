@@ -1,0 +1,30 @@
+.single-dpp_project .post-section {
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.single-dpp_project .post-title {
+    display: inline;
+    margin-right: 0px;
+}
+
+.single-dpp_project .post-wrapper {
+    margin: 0 0 20px 0;
+    padding: 50px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    min-width: 100%;
+}
+
+.single-dpp_project .post-inner {
+  box-shadow: none;
+}
+
+.single-dpp_project figure img {
+  border-radius: 8px;
+}
+
+.single-dpp_project .description {
+  margin-top: 10px;
+}
