@@ -39,11 +39,9 @@ function dpp_setup_post_type_taxonomies() {
         array(
             'hierarchical' => false,
             'label' => 'Programming Languages',
-            'query_var' => true,
-            'rewrite' => array(
-                'slug' => 'languages',
-                'with_front' => false
-            )
+            'query_var' => false,
+            'public' => false,
+            'show_ui' => true,
         )
     );
 	register_taxonomy(
@@ -52,11 +50,9 @@ function dpp_setup_post_type_taxonomies() {
         array(
             'hierarchical' => false,
             'label' => 'Tools & Technologies',
-            'query_var' => true,
-            'rewrite' => array(
-                'slug' => 'tools-technologies',
-                'with_front' => false
-            )
+            'query_var' => false,
+            'public' => false,
+            'show_ui' => true,
         )
     );
 	register_taxonomy(
@@ -65,11 +61,9 @@ function dpp_setup_post_type_taxonomies() {
         array(
             'hierarchical' => false,
             'label' => 'Platforms',
-            'query_var' => true,
-            'rewrite' => array(
-                'slug' => 'platform',
-                'with_front' => false
-            )
+            'query_var' => false,
+            'public' => false,
+            'show_ui' => true,
         )
     );
 
@@ -79,11 +73,9 @@ function dpp_setup_post_type_taxonomies() {
           array(
               'hierarchical' => false,
               'label' => 'Customer',
-              'query_var' => true,
-              'rewrite' => array(
-                  'slug' => 'platform',
-                  'with_front' => false
-              )
+              'query_var' => false,
+              'public' => false,
+              'show_ui' => true,
           )
       );
 }
