@@ -39,6 +39,7 @@ class DeveloperProjectPortfolio {
       register_deactivation_hook( __FILE__, array($this, 'on_deactivate_plugin') );
       add_filter( 'template_include', array($this, 'include_single_template'), 1 );
       add_shortcode( 'dpp_projects', array($this, 'display_projects') );
+      add_action( 'admin_init', array($this, 'setup_tiny_mce_plugin') );
   }
 
   public function on_activate_plugin() {
@@ -102,10 +103,44 @@ class DeveloperProjectPortfolio {
             array(
                 'taxonomy' => 'dpp_customers',
                 'field' => 'term_id',
-                'terms' => $attributes['customerid'],
+                'terms' => $attributes['customer-id'],
             ))));
             return $posts_array;
   }
+
+  public function setup_tiny_mce_plugin() {
+    if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
+      add_filter( 'mce_buttons', array( $this, 'register_tinymce_button' ) );
+      add_filter( 'mce_external_plugins', array( $this, 'add_tinymce_button' ) );
+      add_filter( 'tiny_mce_before_init', array( $this, 'add_tinymce_project_categories' ) );
+    }
+  }
+
+  public function register_tinymce_button( $buttons ) {
+    array_push( $buttons, "button_dpp_project" );
+    return $buttons;
+  }
+
+  function add_tinymce_button( $plugin_array ) {
+    $plugin_array['dpp_project_script'] = plugins_url( '/editor/editor_plugin.js', __FILE__ ) ;
+    return $plugin_array;
+  }
+
+  public function add_tinymce_project_categories( $settings ) {
+    $terms = get_terms( array(
+      'taxonomy' => 'dpp_customers',
+      'hide_empty' => true,
+      'orderby' => 'name',
+      'order' => 'ASC'
+    ));
+    $settings_terms =  array();
+    foreach ($terms as $key => $term) {
+      array_push($settings_terms, $term->term_id . ':' . $term->name);
+    }
+    $settings['dpp_customers'] = implode(",", $settings_terms);
+    return $settings;
+  }
+
 }
 
 $developer_project_portfolio_plugin = new DeveloperProjectPortfolio();
