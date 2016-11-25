@@ -38,6 +38,7 @@ class DeveloperProjectPortfolio {
       register_activation_hook(__FILE__, array($this, 'on_activate_plugin') );
       register_deactivation_hook( __FILE__, array($this, 'on_deactivate_plugin') );
       add_filter( 'template_include', array($this, 'include_single_template'), 1 );
+      add_shortcode( 'dpp_projects', array($this, 'display_projects') );
   }
 
   public function on_activate_plugin() {
@@ -80,6 +81,30 @@ class DeveloperProjectPortfolio {
           }
       }
       return $template_path;
+  }
+
+  public function display_projects($attributes) {
+    $projects = $this->get_project_by_customer_attribute($attributes);
+    ob_start();
+    set_query_var( 'projects', $projects );
+    load_template(dirname(__FILE__) . '/templates/projects-listing.php');
+    return ob_get_clean();
+  }
+
+  private function get_project_by_customer_attribute($attributes) {
+    $posts_array = get_posts(array(
+        'posts_per_page' => -1,
+        'post_type' => 'dpp_project',
+        'post_status' => 'publish',
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'dpp_customers',
+                'field' => 'term_id',
+                'terms' => $attributes['customerid'],
+            ))));
+            return $posts_array;
   }
 }
 

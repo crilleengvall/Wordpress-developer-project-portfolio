@@ -28,3 +28,33 @@
 .single-dpp_project .description {
   margin-top: 10px;
 }
+
+.dpp-projects .project {
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 779px) {
+    .dpp-projects .project {
+        width: 100%;
+    }
+}
+
+.dpp-projects .project figure {
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.dpp-projects .project figure img {
+    display: block;
+}
+
+.dpp-projects .project figcaption {
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

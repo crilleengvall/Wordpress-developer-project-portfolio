@@ -1,9 +1,12 @@
 <?php
 
-function dpp_project_information_get_meta( $value ) {
+function dpp_project_information_get_meta( $value, $id = NULL ) {
 	global $post;
-
-	$field = get_post_meta( $post->ID, $value, true );
+	$post_id = $post->ID;
+	if(is_null($id) == false) {
+		$post_id = $id;
+	}
+	$field = get_post_meta( $post_id, $value, true );
 	if ( ! empty( $field ) ) {
 		return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
 	} else {
