@@ -89,7 +89,7 @@ class DeveloperProjectPortfolio {
     }
     ob_start();
     set_query_var( 'projects', $projects );
-    load_template($template);
+    include($template);
     return ob_get_clean();
   }
 
