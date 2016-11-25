@@ -24,6 +24,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Developer project portfolio.  If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 */
+require_once( 'custom-post-types/project-custom-post-type.php' );
 
 class DeveloperProjectPortfolio {
 
@@ -32,31 +33,27 @@ class DeveloperProjectPortfolio {
   }
 
   private function register_hooks() {
-      $this->add_custom_post_type();
       $this->add_project_links_metabox();
       $this->enqueue_css();
-      register_activation_hook(__FILE__, array($this, 'on_activate_plugin') );
-      register_deactivation_hook( __FILE__, array($this, 'on_deactivate_plugin') );
+      register_activation_hook(__FILE__, array('DeveloperProjectPortfolio', 'on_activate_plugin') );
+      register_deactivation_hook( __FILE__, array('DeveloperProjectPortfolio', 'on_deactivate_plugin') );
       add_filter( 'template_include', array($this, 'include_single_template'), 1 );
       add_shortcode( 'dpp_projects', array($this, 'display_projects') );
       add_action( 'admin_init', array($this, 'setup_tiny_mce_plugin') );
   }
 
-  public function on_activate_plugin() {
-      flush_rewrite_rules();
+  static function on_activate_plugin() {
+    dpp_setup_post_type();
+    flush_rewrite_rules();
   }
 
-  public function on_deactivate_plugin() {
+  static function on_deactivate_plugin() {
       flush_rewrite_rules();
   }
 
   private function enqueue_css() {
     add_action( 'admin_enqueue_scripts', array($this, 'add_admin_css') );
     add_action( 'wp_enqueue_scripts', array($this, 'add_public_css') );
-  }
-
-  private function add_custom_post_type() {
-      require_once( 'custom-post-types/project-custom-post-type.php' );
   }
 
   private function add_project_links_metabox() {
