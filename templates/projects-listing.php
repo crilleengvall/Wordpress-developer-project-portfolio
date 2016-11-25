@@ -9,4 +9,5 @@
      </figure>
    </article>
  <?php } ?>
+ <div class="clear"></div>
  </div>

@@ -29,6 +29,10 @@
   margin-top: 10px;
 }
 
+.clear{
+  clear: both;
+}
+
 .dpp-projects .project {
   float: left;
   width: 50%;
