@@ -83,9 +83,13 @@ class DeveloperProjectPortfolio {
 
   public function display_projects($attributes) {
     $projects = $this->get_project_by_customer_attribute($attributes);
+    $template = dirname(__FILE__) . '/templates/projects-listing.php';
+    if ( $list_theme_file = locate_template( array ( 'projects-listing.php' ) ) ) {
+      $template = $$list_theme_file;
+    }
     ob_start();
     set_query_var( 'projects', $projects );
-    load_template(dirname(__FILE__) . '/templates/projects-listing.php');
+    load_template($template);
     return ob_get_clean();
   }
 
