@@ -33,6 +33,18 @@ function dpp_setup_post_type() {
 add_action( 'init', 'dpp_setup_post_type');
 
 function dpp_setup_post_type_taxonomies() {
+  register_taxonomy(
+        'dpp_customers',
+        'dpp_project',
+        array(
+            'hierarchical' => true,
+            'label' => 'Customer/Category',
+            'query_var' => false,
+            'public' => false,
+            'show_ui' => true,
+        )
+    );
+
     register_taxonomy(
         'dpp_languages',
         'dpp_project',
@@ -66,18 +78,6 @@ function dpp_setup_post_type_taxonomies() {
             'show_ui' => true,
         )
     );
-
-    register_taxonomy(
-          'dpp_customers',
-          'dpp_project',
-          array(
-              'hierarchical' => true,
-              'label' => 'Customer',
-              'query_var' => false,
-              'public' => false,
-              'show_ui' => true,
-          )
-      );
 }
 
 add_action( 'init', 'dpp_setup_post_type_taxonomies');
