@@ -65,7 +65,7 @@ function dpp_project_information_get_terms_and_icon($post_id, $taxonomy_name, $i
 	$terms = dpp_project_information_get_the_terms($post_id, $taxonomy_name);
 	$html = '';
 	if(strlen($terms) > 0) {
-		$html = '<i class="fa fa-' . $icon . ' fa-2" aria-hidden="true"></i>';
+		$html = '<i class="fa fa-' . $icon . ' fa-2" aria-hidden="true"></i> ';
 		$html .= $terms;
 	}
 	return $html;
