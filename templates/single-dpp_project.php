@@ -29,21 +29,18 @@
 					<a href="<?php print dpp_project_information_get_meta( 'project_information_project_url' ) ?>"><?php print dpp_project_information_get_meta( 'project_information_project_url' ) ?></a>
 				</div>
 				<div>
-					<i class="fa fa-code fa-2" aria-hidden="true"></i>
 					<?php
-						echo dpp_project_information_get_the_terms(get_the_ID(), 'dpp_languages');
+						echo dpp_project_information_get_terms_and_icon(get_the_ID(), 'dpp_languages', 'code');
 					?>
 				</div>
 				<div>
-					<i class="fa fa-terminal fa-2" aria-hidden="true"></i>
 					<?php
-						echo dpp_project_information_get_the_terms(get_the_ID(), 'dpp_tools');
+						echo dpp_project_information_get_terms_and_icon(get_the_ID(), 'dpp_tools', 'terminal');
 					?>
 				</div>
 				<div>
-					<i class="fa fa-laptop fa-2" aria-hidden="true"></i>
 					<?php
-						echo dpp_project_information_get_the_terms(get_the_ID(), 'dpp_platforms');
+						echo dpp_project_information_get_terms_and_icon(get_the_ID(), 'dpp_platforms', 'terminal');
 					?>
 				</div>
 			</div>
