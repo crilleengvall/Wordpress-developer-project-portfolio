@@ -2,6 +2,7 @@
     background-color: transparent;
     padding-left: 0px;
     padding-right: 0px;
+    padding-top: 20px;
 }
 
 .single-dpp_project .post-title {
@@ -29,7 +30,7 @@
   margin-top: 10px;
 }
 
-.clear{
+.clear {
   clear: both;
 }
 
@@ -44,16 +45,16 @@
     }
 }
 
-.dpp-projects .project figure {
+.dpp-projects figure, .dpp_project figure {
   margin-bottom: 0px;
   position: relative;
 }
 
-.dpp-projects .project figure img {
+.dpp-projects figure img, .dpp_project figure img {
     display: block;
 }
 
-.dpp-projects .project figcaption {
+.dpp-projects figcaption, .dpp_project figcaption {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
     position: absolute;
@@ -61,4 +62,23 @@
     left: 0;
     right: 0;
     text-align: center;
+}
+
+.dpp_project figcaption {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 50px;
+}
+
+.dpp_project figcaption div {
+  margin-top:-13px;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+.dpp_project figcaption h2 {
+  color: #fff;
+  text-align: left;
 }
