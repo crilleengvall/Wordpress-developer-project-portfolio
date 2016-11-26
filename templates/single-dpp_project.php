@@ -40,7 +40,7 @@
 				</div>
 				<div>
 					<?php
-						echo dpp_project_information_get_terms_and_icon(get_the_ID(), 'dpp_platforms', 'terminal');
+						echo dpp_project_information_get_terms_and_icon(get_the_ID(), 'dpp_platforms', 'laptop');
 					?>
 				</div>
 			</div>
