@@ -40,6 +40,7 @@ class DeveloperProjectPortfolio {
       add_filter( 'template_include', array($this, 'include_single_template'), 1 );
       add_shortcode( 'dpp_projects', array($this, 'display_projects') );
       add_action( 'admin_init', array($this, 'setup_tiny_mce_plugin') );
+      add_action( 'plugins_loaded', array($this, 'load_textdomain') );
   }
 
   static function on_activate_plugin() {
@@ -49,6 +50,10 @@ class DeveloperProjectPortfolio {
 
   static function on_deactivate_plugin() {
       flush_rewrite_rules();
+  }
+
+  public function load_textdomain() {
+    load_plugin_textdomain( 'developer-project-portfolio', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
   }
 
   private function enqueue_css() {
@@ -140,6 +145,7 @@ class DeveloperProjectPortfolio {
       array_push($settings_terms, $term->term_id . ':' . $term->name);
     }
     $settings['dpp_customers'] = implode(",", $settings_terms);
+    $settings['dpp_menu_name'] = __('Insert projects by customer/category', 'developer-project-portfolio');
     return $settings;
   }
 

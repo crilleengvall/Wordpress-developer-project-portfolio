@@ -17,7 +17,7 @@ function dpp_project_information_get_meta( $value, $id = NULL ) {
 function dpp_project_information_add_meta_box() {
 	add_meta_box(
 		'project_information-project-information',
-		__( 'Project information', 'project_information' ),
+		__( 'Project information', 'developer-project-portfolio' ),
 		'dpp_project_information_html',
 		'dpp_project',
 		'normal',
@@ -30,10 +30,10 @@ function dpp_project_information_html( $post) {
 	wp_nonce_field( '_project_information_nonce', 'project_information_nonce' ); ?>
 
 	<p>
-		<label for="project_information_project_url"><?php _e( 'Project url', 'project_information' ); ?></label><br>
+		<label for="project_information_project_url"><?php _e( 'Project url', 'developer-project-portfolio' ); ?></label><br>
 		<input type="text" name="project_information_project_url" id="project_information_project_url" value="<?php echo dpp_project_information_get_meta( 'project_information_project_url' ); ?>">
 	</p>	<p>
-		<label for="project_information_short_description"><?php _e( 'Short description', 'project_information' ); ?></label><br>
+		<label for="project_information_short_description"><?php _e( 'Short description', 'developer-project-portfolio' ); ?></label><br>
 		<input type="text" name="project_information_short_description" id="project_information_short_description" value="<?php echo dpp_project_information_get_meta( 'project_information_short_description' ); ?>">
 	</p><?php
 }

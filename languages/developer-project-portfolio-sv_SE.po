@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Developer project portfolio\n"
+"POT-Creation-Date: 2016-11-26 23:27+0100\n"
+"PO-Revision-Date: 2016-11-26 23:29+0100\n"
+"Last-Translator: Christian Engvall <crilleengvall@gmail.com>\n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: custom-post-types/project-custom-post-type.php:6
+msgid "Projects"
+msgstr "Projekt"
+
+#: custom-post-types/project-custom-post-type.php:7
+msgid "Project"
+msgstr "Projekt"
+
+#: custom-post-types/project-custom-post-type.php:8
+msgid "Add new"
+msgstr "Lägg till nytt"
+
+#: custom-post-types/project-custom-post-type.php:9
+msgid "Add new project"
+msgstr "Lägg till nytt projekt"
+
+#: custom-post-types/project-custom-post-type.php:10
+msgid "Edit project"
+msgstr "Redigera projekt"
+
+#: custom-post-types/project-custom-post-type.php:11
+msgid "New project"
+msgstr "Nytt projekt"
+
+#: custom-post-types/project-custom-post-type.php:12
+msgid "All projects"
+msgstr "Alla projekt"
+
+#: custom-post-types/project-custom-post-type.php:13
+msgid "View project"
+msgstr "Visa projekt"
+
+#: custom-post-types/project-custom-post-type.php:14
+msgid "Search for project"
+msgstr "Sök efter projekt"
+
+#: custom-post-types/project-custom-post-type.php:15
+msgid "No projects found"
+msgstr "Inga projekt hittades"
+
+#: custom-post-types/project-custom-post-type.php:16
+msgid "No projects in trash"
+msgstr "Inga projekt i papperskorgen"
+
+#: custom-post-types/project-custom-post-type.php:17
+msgid "Project Image"
+msgstr "Projektbild"
+
+#: custom-post-types/project-custom-post-type.php:18
+msgid "Set project image"
+msgstr "Välj projektbild"
+
+#: custom-post-types/project-custom-post-type.php:19
+msgid "Remove project image"
+msgstr "Ta bort projektbild"
+
+#: custom-post-types/project-custom-post-type.php:20
+msgid "Use as project image"
+msgstr "Använd som projektbild"
+
+#: custom-post-types/project-custom-post-type.php:41
+msgid "Customer/Category"
+msgstr "Kund/kategori"
+
+#: custom-post-types/project-custom-post-type.php:53
+msgid "Programming Languages"
+msgstr "Språk"
+
+#: custom-post-types/project-custom-post-type.php:64
+msgid "Tools & Technologies"
+msgstr "Verktyg och teknologier"
+
+#: custom-post-types/project-custom-post-type.php:75
+msgid "Platforms"
+msgstr "Plattform"
+
+#: custom-post-types/project-links-metabox.php:20
+msgid "Project information"
+msgstr "Projekinformation"
+
+#: custom-post-types/project-links-metabox.php:33
+msgid "Project url"
+msgstr "Projekt-url"
+
+#: custom-post-types/project-links-metabox.php:36
+msgid "Short description"
+msgstr "Kort beskrivning"
+
+#: developer-project-portfolio.php:148
+msgid "Insert projects by customer/category"
+msgstr "Lägg till projekt sorterat på kund/kategori"

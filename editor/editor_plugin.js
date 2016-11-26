@@ -2,7 +2,7 @@
      tinymce.create('tinymce.plugins.DeveloperProjectPortfolio', {
           init : function(ed, url) {
                ed.addButton( 'button_dpp_project', {
-                    title : 'Insert projects by customer',
+                    title : ed.settings.dpp_menu_name,
                     image : url + '/images/folder.png',
                     type : 'menubutton'
                }
