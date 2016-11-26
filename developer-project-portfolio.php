@@ -68,6 +68,7 @@ class DeveloperProjectPortfolio {
   public function add_public_css() {
     wp_register_style('developer-project-portfolio-css', plugins_url('/css/developer-project-portfolio.css', __FILE__));
     wp_enqueue_style( 'developer-project-portfolio-css' );
+    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
   }
 
   public function include_single_template($template_path) {
