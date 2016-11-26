@@ -71,7 +71,7 @@ function dpp_setup_post_type_taxonomies() {
           'dpp_customers',
           'dpp_project',
           array(
-              'hierarchical' => false,
+              'hierarchical' => true,
               'label' => 'Customer',
               'query_var' => false,
               'public' => false,
