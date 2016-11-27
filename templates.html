@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Editor plugin - Wordpress - Developer project portfolio by Christian Engvall</title>
+    <title>Templates - Wordpress - Developer project portfolio by Christian Engvall</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -35,13 +35,16 @@
       </header>
       <section>
 
-<h3><a id="editor-plugin" class="anchor" href="#editor-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Editor plugin</h3>
+<h3><a id="templates" class="anchor" href="#templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Templates</h3>
+<p>This plugin uses two templates to output html markup for the projects. One is called <strong>projects-listing.php</strong> and the other is called <strong>single-dpp_project.php</strong>. You can override these by adding templates with the same name in your theme folder. A good starting point would be to just copy them from the /templates/ folder.</p>
 
-<p>A project is categorized by the <a href="project-fields.html">taxonomy</a> called Customer/category. The TinyMCE plugin lists these and when clicked it generates a shortcode that will list all projects in that category.</p>
+<h3><a id="listing" class="anchor" href="#listing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>projects-listing.php</h3>
+<p>This template takes care of shortcode rendering of the projects list.</p>
 
-        <a href="https://raw.githubusercontent.com/crilleengvall/Wordpress-developer-project-portfolio/gh-pages/images/screenshots/projects-shortcode.png">
-          <img src="https://raw.githubusercontent.com/crilleengvall/Wordpress-developer-project-portfolio/gh-pages/images/screenshots/projects-shortcode.png" alt="Projects shortcode" title="Projects shortcode">
-        </a>
+<h3><a id="single" class="anchor" href="#single" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>single-dpp_project.php</h3>
+<p>This template renders the project detail view.</p>
+
+
       </section>
       <footer>
         <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
