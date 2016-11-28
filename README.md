@@ -1,6 +1,6 @@
 
 
-![alt text](http://www.christianengvall.se/wp-content/uploads/2016/11/Wordpress-dveloper-project-portfolio.png "Logo")
+![alt text](https://raw.githubusercontent.com/crilleengvall/Wordpress-developer-project-portfolio/gh-pages/images/logo.png "Logo")
 
 # Wordpress - Developer project portfolio
 A project portfolio plugin targeting developers.
