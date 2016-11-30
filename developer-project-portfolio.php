@@ -3,7 +3,7 @@
 * Plugin Name: Developer project portfolio
 * Plugin URI: https://crilleengvall.github.io/Wordpress-developer-project-portfolio/
 * Description: Displays a project portfolio for visitors. Set customer, image, description, languages and platform for each project.
-* Version: 0.1
+* Version: 0.2
 * Author: Christian Engvall
 * Author URI: http://www.christianengvall.se
 * License: GPL3
