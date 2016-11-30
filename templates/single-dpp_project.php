@@ -9,7 +9,7 @@
 	<div class="post-inner">
 
 		<figure>
-			<?php the_post_thumbnail('large'); ?>
+			<?php the_post_thumbnail(); ?>
 			<figcaption class="dpp-project-short-description">	<?php echo the_title('<h2 itemprop="headline" class="post-title">', '</h2>') . '<div> ' . dpp_project_information_get_meta( 'project_information_short_description' ) .'</div>' ?> </figcaption>
 		</figure>
 
