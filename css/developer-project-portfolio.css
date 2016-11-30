@@ -28,7 +28,7 @@
 }
 
 .single-dpp_project figure {
-  display: table;
+  display: inline-block;
 }
 
 .single-dpp_project figure img {
