@@ -15,6 +15,9 @@ This wordpress plugin adds a custom post type called Project. For every project 
 
 It also adds a TinyMCE editor plugin making it easy to add your projects, sorted by Customer/Category, to your page.
 
+= Translations =
+* Swedish (sv_SE)
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
