@@ -22,6 +22,10 @@
   box-shadow: none;
 }
 
+.single-dpp_project figure {
+  display: table;
+}
+
 .single-dpp_project figure img {
   border-radius: 8px;
 }
