@@ -4,7 +4,7 @@ Donate link:
 Tags: portfolio, developer
 Requires at least: 4.6
 Tested up to: 4.7
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,10 +35,19 @@ The plugin is fully documented at <a href="https://crilleengvall.github.io/Wordp
 
 == Changelog ==
 
+= 0.2 =
+* Fixes:
+  * The image caption is now only as wide as the image.
+  * Removed unused call to get_post_format
+  * Using original size of image (full) in single template
+
 = 0.1 =
 No changes yet. First version.
 
 == Upgrade Notice ==
+= 0.2 =
+* Using original size of the image, setting correct width of image caption and removing unused code.
+
 = 0.1 =
 First version
 
