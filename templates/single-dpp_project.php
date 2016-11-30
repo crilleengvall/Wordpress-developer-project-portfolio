@@ -1,8 +1,6 @@
 <?php
 	get_header();
 	the_post();
-
-	$format = get_post_format();
 ?>
 
 <article itemscope itemtype="http://schema.org/BlogPosting" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
