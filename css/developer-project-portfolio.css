@@ -1,3 +1,8 @@
+.single-dpp_project .dpp_project {
+  background: transparent;
+  box-shadow: none;
+}
+
 .single-dpp_project .post-section {
     background-color: transparent;
     padding-left: 0px;
