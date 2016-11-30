@@ -2,7 +2,6 @@
 
 ![alt text](https://raw.githubusercontent.com/crilleengvall/Wordpress-developer-project-portfolio/gh-pages/images/logo.png "Logo")
 
-### Websites
 [Official website](https://crilleengvall.github.io/Wordpress-developer-project-portfolio/"Wordpress plugin directory") and
 [Wordpress plugin directory](https://wordpress.org/plugins/developer-project-portfolio/ "Wordpress plugin directory")
 
