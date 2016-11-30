@@ -19,6 +19,9 @@ It also adds a TinyMCE editor plugin making it easy to add your projects, sorted
 = Example =
 Take a look at <a href="http://www.christianengvall.se/projects/">christianengvall.se</a> to see an example of how it is used.
 
+= Official website =
+The plugin is fully documented at <a href="https://crilleengvall.github.io/Wordpress-developer-project-portfolio/">the plugin website</a>. It contains information about urls, the editor plugin, the fields, and what templates you can override to modify the plugin.
+
 = Contribute =
 <a href="https://github.com/crilleengvall/Wordpress-developer-project-portfolio">Development happens at GitHub.</a> Pull requests are very welcome.
 
