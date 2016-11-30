@@ -36,3 +36,11 @@ First version
 == Frequently Asked Questions ==
 
 No questions yet
+
+== Screenshots ==
+
+1. Public project detail view
+2. Public project list
+3. Project fields
+4. Admin project list
+5. Editor plugin that adds project list to a page
