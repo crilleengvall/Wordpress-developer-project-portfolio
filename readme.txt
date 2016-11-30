@@ -11,9 +11,16 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Displays a project portfolio for visitors. Set customer, image, description, languages and platform for each project.
 == Description ==
 
-This wordpress plugin adds a custom post type called Project. For every project you can add Customer/Category, Programming languages, Tools and Technologies, project-url, short and long description, Platform and a Project image.
+This Wordpress plugin adds a custom post type called Project. For every project you can add Customer/Category, Programming languages, Tools and Technologies, project-url, short and long description, Platform and a Project image.
+The projects are displayed in a responsive manner. Take a look at the <a href="https://wordpress.org/plugins/developer-project-portfolio/screenshots/">screenshots</a> to get a better understanding.
 
 It also adds a TinyMCE editor plugin making it easy to add your projects, sorted by Customer/Category, to your page.
+
+= Example =
+Take a look at <a href="http://www.christianengvall.se/projects/">christianengvall.se</a> to see an example of how it is used.
+
+= Contribute =
+<a href="https://github.com/crilleengvall/Wordpress-developer-project-portfolio">Development happens at GitHub.</a> Pull requests are very welcome.
 
 = Translations =
 * Swedish (sv_SE)
